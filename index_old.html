@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Yesale - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Enhanced Background Animation -->
+    <div class="background-container">
+        <div class="dune-terrain"></div>
+        <div class="floating-orbs">
+            <div class="orb-1"></div>
+            <div class="orb-2"></div>
+            <div class="orb-3"></div>
+        </div>
+        <div class="particle-system"></div>
+    </div>
+
+    <!-- Fixed Navigation -->
+    <nav class="glass-nav fixed-nav" id="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-section="0">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="1">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="2">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="3">
+                        <i class="fas fa-cogs"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="4">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-section="5">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-btn" class="theme-btn">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Horizontal Sliding Container -->
+    <div class="slider-container" id="slider-container">
+        <div class="slides-wrapper" id="slides-wrapper">
+            
+            <!-- Slide 1: Home -->
+            <div class="slide active" data-slide="0">
+                <section class="hero-section">
+            <div class="glass-card hero-card">
+                <div class="hero-content">
+                    <div class="hero-avatar">
+                        <img src="assets/img/profile.jpg" alt="Ashish Yesale" class="avatar-img">
+                        <div class="avatar-glow"></div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Ashish Yesale</span>
+                    </h1>
+                    <p class="hero-subtitle">Full-Stack Web Developer & Graphic Designer</p>
+                    <p class="hero-description">
+                        Experienced Software Engineer creating innovative solutions. Skilled in Android Development, 
+                        CyberSecurity, Python, and web development. Passionate about delivering high-quality results.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-eye"></i>
+                            View Work
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://twitter.com/yesaleashish" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yesaleashish" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ashish_yesale" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ashishyesale" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ashishyesale" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title">About</h2>
+                <p class="section-subtitle">Learn More About Me</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="glass-card about-info">
+                    <div class="about-image">
+                        <img src="assets/img/bgcopy.jpg" alt="Ashish Yesale">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="about-details">
+                        <h3>Full-Stack Web Developer & Graphic Designer</h3>
+                        <p>Experienced Software Engineer creating innovative solutions. Skilled in Android Development, CyberSecurity, Python, and web development. Passionate about delivering high-quality results.</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-globe"></i>
+                                <strong>Website:</strong>
+                                <span>ashishyesale.dev</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <strong>Degree:</strong>
+                                <span>B.Tech (Computer Science and Engg.)</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <strong>Phone:</strong>
+                                <span>+91 9699981300</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <strong>Email:</strong>
+                                <span>ashishyesale007@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <strong>City:</strong>
+                                <span>Kolhapur, India</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-briefcase"></i>
+                                <strong>Freelance:</strong>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                        
+                        <p>Artificial Intelligence (AI) and Machine Learning (ML) are rapidly advancing fields within software engineering, with applications ranging from self-driving cars to personalized recommendations.</p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="glass-card stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Open Source Contribution</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Hours Of Support</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="skills-section">
+                    <div class="glass-card skills-card">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>HTML</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>PHP</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Java</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests & Skills -->
+                    <div class="interests-skills">
+                        <div class="glass-card interests-card">
+                            <h3>Interests</h3>
+                            <div class="interests-grid">
+                                <div class="interest-item">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </div>
+                                <div class="interest-item">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>Network Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card soft-skills-card">
+                            <h3>Soft Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-tag">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Social Media Handling</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>UI-UX Designer</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-code"></i>
+                                    <span>Web Designer</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>App Designer</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-music"></i>
+                                    <span>Singing</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-users"></i>
+                                    <span>Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card hard-skills-card">
+                            <h3>Hard Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-tag">
+                                    <i class="fas fa-video"></i>
+                                    <span>Video Editing</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Photography</span>
+                                </div>
+                                <div class="skill-tag">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Project Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section">
+            <div class="section-header">
+                <h2 class="section-title">Resume</h2>
+                <p class="section-subtitle">Check My Resume</p>
+            </div>
+
+            <div class="resume-content">
+                <div class="glass-card education-card">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>(B.TECH) Bachelor of Technology in Computer Science & Engineering</h4>
+                                <span class="timeline-date">2022 - 2026 (Current)</span>
+                                <p><em>University: Dr.Babasaheb Ambedkar Technological University (DBATU)</em></p>
+                                <p>Currently pursuing my UG Degree under college NMCE, Pune-Bangalore (NH4) Highway under a <a href="https://dbatu.ac.in/naac-status">NAAC Grade 'B' University</a>.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>The Central Board of Secondary Education (CBSE) Program in High School</h4>
+                                <span class="timeline-date">2018 - 2020</span>
+                                <p><em><a href="https://fiapanhala.com/">Fort International Academy</a>, Jr. College in Panhala - KOLHAPUR</em></p>
+                                <p>I started my journey of life in "Fort International Academy" a boarding, co-educational CBSE affiliated school from X to Grade XII.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card experience-card">
+                    <h3>Professional Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>AI/ML Lead at Google Developer Group (GDG)</h4>
+                                <span class="timeline-date">2024 - Present</span>
+                                <p><em><a href="https://gdg.community.dev/gdg-on-campus-nanasaheb-mahadik-college-of-engineering-sangli-india">GDG on Campus NMCE - Sangli, India</a></em></p>
+                                <ul>
+                                    <li>Lead performer of Artificial Intelligence & Machine Learning appointed by Google Developers</li>
+                                    <li>Skills: Leadership, Presentation, Event Management</li>
+                                    <li>On Ground Work: Conducting, Management of events with Organizer and contributing to community group for students</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4><a href="https://developers.google.com/profile/u/ashishyesale">Google Developer & Community Contributor</a></h4>
+                                <span class="timeline-date">2021 - Present</span>
+                                <p><em>Google Developer</em></p>
+                                <ul>
+                                    <li>Maintained an active developer profile through contributions to Google Developer programs and open-source projects</li>
+                                    <li>Participated in Google Developer Student Clubs (GDSC) as AI/ML Lead</li>
+                                    <li>Submitted a project proposal for Google Summer of Code 2025 under the Chromium organization</li>
+                                    <li>Engaged with Google's developer ecosystem including Android, Firebase, and TensorFlow</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card certifications-card">
+                    <h3>Licenses & Certifications</h3>
+                    <div class="cert-section">
+                        <h4>Google</h4>
+                        <p><em>All certificates are approved by recognized MNC's and Government officials</em></p>
+                        <ul>
+                            <li><a href="https://www.cloudskillsboost.google/public_profiles/f458352e-6afc-48dc-84c0-950a16d760fd">Skill Boost</a></li>
+                            <li>Android Development</li>
+                            <li>GSOC 2025 Participant (<a href="https://github.com/AshishYesale7/VirtualPrinter">Project link</a>)</li>
+                        </ul>
+                        <h4>AWS</h4>
+                        <ul>
+                            <li>Amazon Cloud Certificates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">My Services</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Freelancer</h3>
+                    <p>You can hire me to build your projects.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Professional Video Editor/Photography</h3>
+                    <p>I use software like Adobe Photoshop, Wondershare Filmora, DaVinci</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">My Works</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="system">System Design</button>
+                <button class="filter-btn" data-filter="college">College Projects</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass-card project-card" data-category="system">
+                    <div class="project-image">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" alt="SAGE-OS">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="assets/img/portfolio/portfolio-1.jpg" class="project-action">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/AshishYesale7/SAGE-OS" class="project-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SAGE-OS</h3>
+                        <p>System Design</p>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card" data-category="android">
+                    <div class="project-image">
+                        <img src="assets/img/portfolio/hyperstream.jpg" alt="Hyper-Stream-App">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="assets/img/portfolio/hyperstream.jpg" class="project-action">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.in.streamhyper" class="project-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hyper-Stream-App</h3>
+                        <p>Android</p>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="assets/img/portfolio/laptoppricepredection.jpg" alt="Laptop-Price-Predictor">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="assets/img/portfolio/laptoppricepredection.jpg" class="project-action">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/AshishYesale7/Laptop-Price-Predictor" class="project-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Laptop-Price-Predictor</h3>
+                        <p>AI/ML</p>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card" data-category="college">
+                    <div class="project-image">
+                        <img src="assets/img/portfolio/clgmanagement.png" alt="College Management System">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="assets/img/portfolio/clgmanagement.png" class="project-action">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/AshishYesale7/College-Management-System-In-Java" class="project-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>College Management System</h3>
+                        <p>Software</p>
+                    </div>
+                </div>
+
+                <div class="glass-card project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="assets/img/portfolio/suspecious.jpeg" alt="Suspicious-Activity-Detection">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="assets/img/portfolio/suspiciousactivity.jpg" class="project-action">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="https://github.com/AshishYesale7/Suspicious-Activity-Detection" class="project-action">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Suspicious-Activity-Detection</h3>
+                        <p>AI/ML</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Contact Me</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>My Address</h3>
+                        <p>Maharashtra, India</p>
+                    </div>
+
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social Profiles</h3>
+                        <div class="social-links">
+                            <a href="https://twitter.com/yesaleashish" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/yesaleashish" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ashish_yesale" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ashishyesale" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@ashishyesale" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Me</h3>
+                        <p>ashishyesale007@gmail.com</p>
+                    </div>
+
+                    <div class="glass-card contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3>Telegram</h3>
+                        <p>@ashishyesale</p>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-form-card">
+                    <form class="contact-form" action="forms/contact.php" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
