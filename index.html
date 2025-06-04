@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Ashish Yesale's Enhanced Portfolio</title>
+  <title>Ashish Yesale's Portfolio</title>
   <meta content="ashishyesale portfolio" name="description">
   <meta content="ashishyesale , yesaleashish , Developer " name="keywords">
 
@@ -63,7 +63,7 @@
 
       <!-- Theme Toggle -->
       <div class="theme-toggle">
-        <button id="theme-btn" class="theme-btn">
+        <button id="theme-btn" class="theme-btn" onclick="toggleTheme()">
           <i class="fas fa-sun"></i>
         </button>
       </div>
@@ -474,7 +474,20 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main_reference.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Floating Orbs -->
+  <div class="floating-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+    <div class="orb orb-6"></div>
+  </div>
+
+  <!-- Particle System -->
+  <canvas id="particle-canvas"></canvas>
 
 </body>
 
