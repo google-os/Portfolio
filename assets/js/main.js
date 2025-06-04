@@ -130,8 +130,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         toggleTheme() {
+            // Add rotation animation to theme button
+            if (this.themeBtn) {
+                this.themeBtn.style.transform = 'rotate(360deg) scale(1.1)';
+                setTimeout(() => {
+                    this.themeBtn.style.transform = 'rotate(0deg) scale(1)';
+                }, 300);
+            }
+            
+            // Add smooth transition effect
+            this.body.style.transition = 'all 1.5s ease';
+            
             const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
             this.setTheme(newTheme);
+            
+            // Reset transition after theme change
+            setTimeout(() => {
+                this.body.style.transition = '';
+            }, 1500);
         }
     }
 
@@ -189,15 +205,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         filterProjects(filter) {
-            this.projectCards.forEach(card => {
+            this.projectCards.forEach((card, index) => {
                 const category = card.getAttribute('data-category');
                 
                 if (filter === 'all' || category === filter) {
-                    card.classList.remove('hidden');
-                    card.style.display = 'block';
-                } else {
-                    card.classList.add('hidden');
+                    // Show card with staggered animation
                     setTimeout(() => {
+                        card.classList.remove('hidden');
+                        card.style.display = 'block';
+                        card.style.animation = `fadeInUp 0.6s ease forwards`;
+                    }, index * 100);
+                } else {
+                    // Hide card with fade out
+                    card.style.animation = `fadeOut 0.3s ease forwards`;
+                    setTimeout(() => {
+                        card.classList.add('hidden');
                         card.style.display = 'none';
                     }, 300);
                 }
