@@ -1995,6 +1995,7 @@ body.light-theme {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    z-index: 1;
 }
 
 /* Horizontal Container */
@@ -2005,6 +2006,7 @@ body.light-theme {
     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     will-change: transform;
+    transform: translateX(0vw); /* Initialize at first section */
 }
 
 /* Section Slides */

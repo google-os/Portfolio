@@ -1,126 +1,83 @@
-// Simple Horizontal Slider
-class HorizontalSlider {
-    constructor() {
-        this.currentSlide = 0;
-        this.totalSlides = 6;
-        this.slidesWrapper = null;
-        this.navLinks = null;
-        
-        this.init();
-    }
+// Simple Horizontal Slider - Fixed Version
+let currentSlide = 0;
+const totalSlides = 6;
 
-    init() {
-        // Wait for DOM to be fully loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.setup());
-        } else {
-            this.setup();
-        }
+function initializeSlider() {
+    console.log('Initializing slider...');
+    
+    const slidesWrapper = document.getElementById('horizontal-container');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    
+    console.log('slidesWrapper:', slidesWrapper);
+    console.log('navLinks:', navLinks);
+    
+    if (!slidesWrapper) {
+        console.error('horizontal-container not found!');
+        return;
     }
-
-    setup() {
-        this.slidesWrapper = document.getElementById('horizontal-container');
-        this.navLinks = document.querySelectorAll('nav a[data-section]');
-        
-        console.log('HorizontalSlider setup');
-        console.log('slidesWrapper:', this.slidesWrapper);
-        console.log('navLinks:', this.navLinks);
-        
-        if (this.slidesWrapper && this.navLinks.length > 0) {
-            this.bindEvents();
-            this.updateActiveStates();
-            console.log('HorizontalSlider ready');
-        } else {
-            console.error('Required elements not found');
-        }
+    
+    if (navLinks.length === 0) {
+        console.error('No navigation links found!');
+        return;
     }
-
-    bindEvents() {
-        // Navigation clicks
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const sectionIndex = link.getAttribute('data-section');
-                if (sectionIndex !== null) {
-                    console.log('Nav clicked, going to section:', sectionIndex);
-                    this.goToSlide(parseInt(sectionIndex));
-                }
-            });
+    
+    // Add click events to navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionIndex = parseInt(this.getAttribute('data-section'));
+            console.log('Clicked section:', sectionIndex);
+            goToSlide(sectionIndex);
         });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            switch(e.key) {
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.prevSlide();
-                    break;
-                case 'ArrowRight':
-                    e.preventDefault();
-                    this.nextSlide();
-                    break;
-                case 'Home':
-                    e.preventDefault();
-                    this.goToSlide(0);
-                    break;
-                case 'End':
-                    e.preventDefault();
-                    this.goToSlide(this.totalSlides - 1);
-                    break;
-            }
-        });
-    }
-
-    goToSlide(index) {
-        if (index < 0 || index >= this.totalSlides || !this.slidesWrapper) return;
-        
-        this.currentSlide = index;
-        // Each section is 100vw wide, so to show section N, we need to move -N * 100vw
-        const translateX = -index * 100;
-        
-        console.log(`Going to slide ${index}, translateX: ${translateX}vw`);
-        
-        this.slidesWrapper.style.transform = `translateX(${translateX}vw)`;
-        console.log('Transform applied:', this.slidesWrapper.style.transform);
-        
-        this.updateActiveStates();
-    }
-
-    nextSlide() {
-        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
-        this.goToSlide(nextIndex);
-    }
-
-    prevSlide() {
-        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-        this.goToSlide(prevIndex);
-    }
-
-    updateActiveStates() {
-        // Update navigation active states
-        this.navLinks.forEach((link) => {
-            const sectionIndex = parseInt(link.getAttribute('data-section'));
-            if (sectionIndex === this.currentSlide) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-
-        // Update section active states
-        const sections = document.querySelectorAll('.section-slide');
-        sections.forEach((section, index) => {
-            if (index === this.currentSlide) {
-                section.classList.add('active');
-            } else {
-                section.classList.remove('active');
-            }
-        });
-    }
+    });
+    
+    // Initialize to first slide
+    goToSlide(0);
+    console.log('Slider initialized successfully');
 }
 
-// Initialize the slider
-const slider = new HorizontalSlider();
+function goToSlide(index) {
+    console.log('Going to slide:', index);
+    
+    if (index < 0 || index >= totalSlides) {
+        console.error('Invalid slide index:', index);
+        return;
+    }
+    
+    const slidesWrapper = document.getElementById('horizontal-container');
+    if (!slidesWrapper) {
+        console.error('horizontal-container not found in goToSlide!');
+        return;
+    }
+    
+    currentSlide = index;
+    const translateX = -index * 100;
+    
+    console.log('Setting transform to:', `translateX(${translateX}vw)`);
+    slidesWrapper.style.transform = `translateX(${translateX}vw)`;
+    
+    updateActiveStates();
+}
+
+function updateActiveStates() {
+    // Update navigation active states
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    navLinks.forEach(link => {
+        const sectionIndex = parseInt(link.getAttribute('data-section'));
+        if (sectionIndex === currentSlide) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeSlider);
+} else {
+    initializeSlider();
+}
 
 // Theme Toggle Functionality
 function toggleTheme() {

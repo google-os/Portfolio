@@ -503,5 +503,69 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    
+    <!-- Inline JavaScript for immediate execution -->
+    <script>
+        console.log('Inline script starting...');
+        
+        // Force horizontal sliding to work
+        function forceSlideToSection(sectionIndex) {
+            console.log('Force sliding to section:', sectionIndex);
+            const container = document.getElementById('horizontal-container');
+            if (container) {
+                const translateX = -sectionIndex * 100;
+                container.style.transform = `translateX(${translateX}vw)`;
+                console.log('Applied transform:', container.style.transform);
+                
+                // Update active states
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                document.querySelector(`[data-section="${sectionIndex}"]`).classList.add('active');
+            } else {
+                console.error('Container not found!');
+            }
+        }
+        
+        // Add event listeners immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up navigation...');
+            
+            const navLinks = document.querySelectorAll('.nav-link[data-section]');
+            console.log('Found nav links:', navLinks.length);
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionIndex = parseInt(this.getAttribute('data-section'));
+                    console.log('Navigation clicked:', sectionIndex);
+                    forceSlideToSection(sectionIndex);
+                });
+            });
+            
+            // Initialize to first section
+            forceSlideToSection(0);
+        });
+        
+        // Also try immediate execution
+        if (document.readyState !== 'loading') {
+            console.log('Document already loaded, executing immediately...');
+            setTimeout(() => {
+                const navLinks = document.querySelectorAll('.nav-link[data-section]');
+                console.log('Immediate setup - Found nav links:', navLinks.length);
+                
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const sectionIndex = parseInt(this.getAttribute('data-section'));
+                        console.log('Navigation clicked (immediate):', sectionIndex);
+                        forceSlideToSection(sectionIndex);
+                    });
+                });
+                
+                forceSlideToSection(0);
+            }, 100);
+        }
+    </script>
 </body>
 </html>
